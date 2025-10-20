@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.TuliCoins" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.TuliCoins" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="colorPrimary">#E91E63</item>
+        <item name="colorPrimaryVariant">#C2185B</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+    </style>
 </resources>

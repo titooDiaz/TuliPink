@@ -1,47 +1,54 @@
 package com.example.tulicoins
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.tulicoins.ui.theme.TuliCoinsTheme
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import java.text.SimpleDateFormat
+import java.util.*
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+    private var esGasto = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            TuliCoinsTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+        setContentView(R.layout.activity_main)
+
+        val inputMonto = findViewById<EditText>(R.id.inputMonto)
+        val inputFecha = findViewById<EditText>(R.id.inputFecha)
+        val btnAccion = findViewById<Button>(R.id.btnAccion)
+        val btnIngreso = findViewById<LinearLayout>(R.id.btnIngreso)
+        val btnGasto = findViewById<LinearLayout>(R.id.btnGasto)
+
+        // Fecha automática
+        val hoy = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(Date())
+        inputFecha.hint = "Fecha (por defecto: $hoy)"
+
+        // Botones para cambiar modo
+        btnIngreso.setOnClickListener {
+            esGasto = false
+            btnAccion.text = "Agregar ingreso"
+            Toast.makeText(this, "Modo ingreso", Toast.LENGTH_SHORT).show()
+        }
+
+        btnGasto.setOnClickListener {
+            esGasto = true
+            btnAccion.text = "Agregar gasto"
+            Toast.makeText(this, "Modo gasto", Toast.LENGTH_SHORT).show()
+        }
+
+        // Acción principal
+        btnAccion.setOnClickListener {
+            val monto = inputMonto.text.toString()
+            val fecha = if (inputFecha.text.isNotEmpty()) inputFecha.text.toString() else hoy
+
+            if (monto.isEmpty()) {
+                Toast.makeText(this, "Ingrese un monto", Toast.LENGTH_SHORT).show()
+            } else {
+                val tipo = if (esGasto) "Gasto" else "Ingreso"
+                Toast.makeText(this, "$tipo de $$monto agregado ($fecha)", Toast.LENGTH_LONG).show()
+                inputMonto.text.clear()
+                inputFecha.text.clear()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    TuliCoinsTheme {
-        Greeting("Android")
     }
 }
