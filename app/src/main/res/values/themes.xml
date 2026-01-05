@@ -16,4 +16,9 @@
         <item name="android:textColorPrimary">#212121</item>
     </style>
 
+    <style name="BottomNavigation">
+        <item name="android:background">@color/pink</item>
+        <item name="itemIconTint">@color/pink_dark</item>
+        <item name="itemTextColor ">@color/pink_dark</item>
+    </style>
 </resources>

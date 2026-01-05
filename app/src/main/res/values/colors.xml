@@ -11,6 +11,9 @@
     <color name="primary">#F8BBD0</color>
     <color name="secondary">#FFFFFF</color>
     <color name="accent">#FF80AB</color>
+    <color name="pink">#F4B5CB</color>
+    <color name="pink_dark">#F4B5CB</color>
     <color name="textDark">#333333</color>
     <color name="textLight">#888888</color>
+
 </resources>
