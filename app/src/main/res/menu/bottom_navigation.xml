@@ -3,16 +3,16 @@
     <item
         android:id="@+id/firstFragment"
         android:icon="@android:drawable/alert_dark_frame"
-        android:title="primero"/>
+        android:title="Finanzas"/>
 
     <item
         android:id="@+id/secondFragment"
         android:icon="@android:drawable/alert_dark_frame"
-        android:title="segundo"/>
+        android:title="Inicio"/>
 
     <item
         android:id="@+id/thirdFragment"
         android:icon="@android:drawable/alert_dark_frame"
-        android:title="tercero"/>
+        android:title="Tipos"/>
 
 </menu>

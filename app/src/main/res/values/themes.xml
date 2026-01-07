@@ -18,7 +18,7 @@
 
     <style name="BottomNavigation">
         <item name="android:background">@color/pink</item>
-        <item name="itemIconTint">@color/pink_dark</item>
-        <item name="itemTextColor ">@color/pink_dark</item>
+        <item name="itemIconTint">@color/white</item>
+        <item name="itemTextColor">@color/white</item>
     </style>
 </resources>
