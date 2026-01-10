@@ -21,24 +21,40 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <!-- Pink circle icon (right top) -->
-    <View
+    <FrameLayout
         android:id="@+id/pinkCircle1"
-        android:layout_width="18dp"
-        android:layout_height="18dp"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
         android:background="@drawable/pink_circle"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvTitle"/>
+        app:layout_constraintTop_toTopOf="@id/tvTitle">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/date"
+            android:tint="#FFFFFF"/>
+    </FrameLayout>
 
     <!-- Second pink circle icon -->
-    <View
+    <FrameLayout
         android:id="@+id/pinkCircle2"
-        android:layout_width="18dp"
-        android:layout_height="18dp"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
         android:background="@drawable/pink_circle"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="68dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvTitle"/>
+        app:layout_constraintTop_toTopOf="@id/tvTitle">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/filter"
+            android:tint="#FFFFFF"/>
+    </FrameLayout>
 
     <!-- Date text -->
     <TextView
