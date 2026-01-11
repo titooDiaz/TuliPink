@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-</set>
+    <item android:state_pressed="true">
+        <objectAnimator
+            android:propertyName="translationZ"
+            android:duration="120"
+            android:valueTo="2dp"
+            android:valueType="floatType"/>
+    </item>
+
+    <item>
+        <objectAnimator
+            android:propertyName="translationZ"
+            android:duration="120"
+            android:valueTo="10dp"
+            android:valueType="floatType"/>
+    </item>
+
+</selector>
