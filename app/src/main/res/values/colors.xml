@@ -9,11 +9,17 @@
     <color name="white">#FFFFFFFF</color>
     // app colors
     <color name="primary">#F8BBD0</color>
+    <color name="gray">#B7B7B7</color>
     <color name="secondary">#FFFFFF</color>
     <color name="accent">#FF80AB</color>
+    <color name="darkCard">#E22CC4</color>
+    <color name="card">#EF93FF</color>
     <color name="pink">#F4B5CB</color>
     <color name="pink_dark">#FD4D8A</color>
     <color name="textDark">#333333</color>
     <color name="textLight">#888888</color>
+
+    //navbar
+    <color name="icons_navbar">#F22D71</color>
 
 </resources>
